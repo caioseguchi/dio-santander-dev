@@ -2,7 +2,7 @@
 Java RESTful API - Santander:
 
 ## Class Diagrma
-```
+```mermaid
 classDiagram
   class User {
     +String name
@@ -33,8 +33,8 @@ classDiagram
     +String description
   }
 
-  User --> Account
-  User --> Feature
-  User --> Card
-  User --> News
+  User "1"*-->"1" Account
+  User "1"*-->"N" Feature
+  User "1"*-->"1" Card
+  User "1"*-->"N" News
 ```
