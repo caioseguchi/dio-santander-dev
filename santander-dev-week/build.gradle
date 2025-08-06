@@ -32,6 +32,12 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "me.seguchi.santander_dev_week.SantanderDevWeekApplication"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
