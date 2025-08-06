@@ -1,7 +1,9 @@
 # Santander Dev Week
+
 Java RESTful API - Santander:
 
 ## Class Diagrma
+
 ```mermaid
 classDiagram
   class User {

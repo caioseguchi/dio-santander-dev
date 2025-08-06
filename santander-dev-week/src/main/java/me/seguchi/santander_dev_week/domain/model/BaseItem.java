@@ -1,4 +1,4 @@
-package me.seguchi.santander_dev_week.model;
+package me.seguchi.santander_dev_week.domain.model;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

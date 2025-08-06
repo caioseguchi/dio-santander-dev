@@ -1,6 +1,6 @@
-package me.seguchi.santander_dev_week.repository;
+package me.seguchi.santander_dev_week.domain.repository;
 
-import me.seguchi.santander_dev_week.model.User;
+import me.seguchi.santander_dev_week.domain.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

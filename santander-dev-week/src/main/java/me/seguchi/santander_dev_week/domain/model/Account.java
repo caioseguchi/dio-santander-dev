@@ -1,12 +1,11 @@
-package me.seguchi.santander_dev_week.model;
+package me.seguchi.santander_dev_week.domain.model;
 
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-@Entity(name = "tb_card")
-public class Card {
-
+@Entity(name = "tb_account")
+public class Account {
     //Variables
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,10 +13,15 @@ public class Card {
 
     @Column(unique = true)
     private String number;
-    @Column(name = "available_limit", precision = 2, scale = 13)
+    private String agency;
+    @Column(precision = 13, scale = 2)
+    private BigDecimal balance;
+    @Column(name = "additional_limit",precision = 13, scale = 2)
     private BigDecimal limit;
 
-    //Getters and Setters
+
+
+    //Getters and setter
     public Long getId() {
         return id;
     }
@@ -32,6 +36,22 @@ public class Card {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getAgency() {
+        return agency;
+    }
+
+    public void setAgency(String agency) {
+        this.agency = agency;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public BigDecimal getLimit() {
